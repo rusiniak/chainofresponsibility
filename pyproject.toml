@@ -1,0 +1,31 @@
+[build-system]
+requires = [
+    "setuptools>=60",
+    "setuptools-scm>=8.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chainofresponsibility"
+authors = [
+    {name = "Mariusz Rusiniak", email = "mariusz.rusiniak@pagaya.com"},
+]
+description = "Chain of Responsibility design pattern package."
+keywords = ["Chain of responsibility", "design pattern"]
+classifiers = ["Development Status :: 5 - Production/Stable",
+ "Environment :: Console",
+ "Intended Audience :: Science/Research",
+ "Operating System :: OS Independent",
+ "Programming Language :: Python :: 3",
+]
+requires-python = ">=3.8"
+dynamic = ["version", "readme"]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-check",
+    "pytest-mock"
+]
+
+[tool.setuptools.dynamic]
+readme = {file = ["README.md"], content-type = "text/markdown"}
